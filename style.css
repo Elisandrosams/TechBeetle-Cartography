@@ -6,7 +6,7 @@
     font-family: "Roboto", sans-serif;
 }
 body {
-    background-color:rgba(75, 166, 112, 0.773);
+    background-color:rgba(2, 81, 18, 0.773);
 }
 ul {
     text-decoration: none;
@@ -20,7 +20,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    background-color: white;
+    
 
 }
 .nav-left, .nav-right {
@@ -33,6 +33,7 @@ ul {
 }
 .nav-logo {
     justify-content: center;
+    filter:grayscale(1) invert(1);
 }
 .nav__img--wrapper {
     display:flex;
@@ -48,6 +49,7 @@ ul {
 .nav__links {
     display:flex;
     padding: 24px 0px;
+    justify-content: center;
     
 }
 .nav__link {
@@ -56,4 +58,23 @@ ul {
     font-size: 20px;
     font-weight: bold;
     padding: 4px;
+    color: white;
+    letter-spacing: 1px;
+    border-bottom: 3px solid transparent;
+    position: relative;
+    transition: all 300ms;
+}
+.nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transition: all 300ms ease;
+    opacity: 0;
+}
+.nav__link:hover:after {
+    opacity: 1;
 }
