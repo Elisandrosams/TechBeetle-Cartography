@@ -32,11 +32,6 @@ p {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    
-
-}
-.nav-right {
-    flex: 1;
 }
 .nav-right {
     width: calc(100% / 3);
